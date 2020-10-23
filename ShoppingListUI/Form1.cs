@@ -20,19 +20,19 @@ namespace ShoppingListUI
 
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+        
+        private void Form1_Load(object sender, EventArgs e)
+        {
             List<Item> shoppingList = new List<Item>();
             shoppingList.Add(new Item("Bread", 9.00M));
             shoppingList.Add(new Item("Cheese", 15.00M));
             shoppingList.Add(new Item("Eggs", 7.00M));
             shoppingList.Add(new Item("Bacon", 25.00M));
 
-            listBox1.DataSource = shoppingList.ToString();
+            listBox1.DataSource = shoppingList;
             MessageBox.Show(shoppingList.ToString());
-        }
-        
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
