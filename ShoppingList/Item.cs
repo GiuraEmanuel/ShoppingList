@@ -6,11 +6,13 @@ namespace ShoppingListBL
 {
     public class Item
     {
-        public string ItemName { get; set; }
+        public string ItemName { get;}
+        public decimal Price { get;}
 
-        public Item(string itemName)
+        public Item(string itemName, decimal price)
         {
             ItemName = itemName;
+            Price = price;
         }
 
         public override string ToString()
