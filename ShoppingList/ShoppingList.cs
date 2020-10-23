@@ -6,26 +6,26 @@ namespace ShoppingListBL
 {
     public class ShoppingList
     {
-        private List<Item> items;
+        public List<Item> Items { get; set; }
         public string ListName { get;}
 
-        public ShoppingList(string listName)
+        public ShoppingList(string listName, List<Item> items)
         {
             ListName = listName;
-            items = new List<Item>();
+            Items = items;
         }
 
-        public void DisplayItems()
-        {
-            foreach (var item in items)
-            {
-                Console.WriteLine(item.ToString());
-            }
-        }
+        //public void DisplayItems()
+        //{
+        //    foreach (var item in Items)
+        //    {
+        //        Console.WriteLine(item.ToString());
+        //    }
+        //}
 
-        public void AddItemToShoppingList(Item item)
-        {
-            items.Add(item);
-        }
+        //public void AddItemToShoppingList(Item item)
+        //{
+        //    Items.Add(item);
+        //}
     }
 }

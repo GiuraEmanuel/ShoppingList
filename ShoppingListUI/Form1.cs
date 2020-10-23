@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,17 +18,16 @@ namespace ShoppingListUI
             InitializeComponent();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ShoppingList shoppingList = new ShoppingList("Food List");
-            shoppingList.AddItemToShoppingList(new Item("Bread",15.0M));
-            shoppingList.AddItemToShoppingList(new Item("Cheese",25.5M));
-            shoppingList.AddItemToShoppingList(new Item("Bacon",30.5M));
-            shoppingList.AddItemToShoppingList(new Item("Eggs",17.99M));
-            shoppingList.DisplayItems();
+            List<Item> shoppingList = new List<Item>();
+            shoppingList.Add(new Item("Bread", 9.00M));
+            shoppingList.Add(new Item("Cheese", 15.00M));
+            shoppingList.Add(new Item("Eggs", 7.00M));
+            shoppingList.Add(new Item("Bacon", 25.00M));
 
-            shoppingListBox.DataSource = shoppingList;
-            
+            listBox1.DataSource = shoppingList.ToString();
+            MessageBox.Show(shoppingList.ToString());
         }
         
         private void Form1_Load(object sender, EventArgs e)
