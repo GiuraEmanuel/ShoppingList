@@ -17,7 +17,7 @@ namespace ShoppingListBL
 
         public override string ToString()
         {
-            return $"{ItemName}";
+            return $"{ItemName} - {Price}";
         }
     }
 }

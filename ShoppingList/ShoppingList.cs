@@ -6,7 +6,7 @@ namespace ShoppingListBL
 {
     public class ShoppingList
     {
-        public List<Item> items;
+        private List<Item> items;
         public string ListName { get;}
 
         public ShoppingList(string listName)
