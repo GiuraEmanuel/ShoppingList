@@ -28,34 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.components = new System.ComponentModel.Container();
+            this.shoppingListBox = new System.Windows.Forms.ListBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.loadShoppingList = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // shoppingListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(277, 47);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(191, 304);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
+            this.shoppingListBox.FormattingEnabled = true;
+            this.shoppingListBox.ItemHeight = 20;
+            this.shoppingListBox.Location = new System.Drawing.Point(93, 37);
+            this.shoppingListBox.Name = "shoppingListBox";
+            this.shoppingListBox.Size = new System.Drawing.Size(191, 304);
+            this.shoppingListBox.TabIndex = 0;
+            this.shoppingListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
+            // 
+            // loadShoppingList
+            // 
+            this.loadShoppingList.Location = new System.Drawing.Point(114, 347);
+            this.loadShoppingList.Name = "loadShoppingList";
+            this.loadShoppingList.Size = new System.Drawing.Size(148, 37);
+            this.loadShoppingList.TabIndex = 1;
+            this.loadShoppingList.Text = "Load Shopping List";
+            this.loadShoppingList.UseVisualStyleBackColor = true;
+            this.loadShoppingList.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 472);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.loadShoppingList);
+            this.Controls.Add(this.shoppingListBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox shoppingListBox;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button loadShoppingList;
     }
 }
 
