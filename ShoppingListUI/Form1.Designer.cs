@@ -33,6 +33,7 @@
             this.loadShoppingList = new System.Windows.Forms.Button();
             this.checkedShoppingList = new System.Windows.Forms.CheckedListBox();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.addItem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.loadShoppingList.Name = "loadShoppingList";
             this.loadShoppingList.Size = new System.Drawing.Size(148, 42);
             this.loadShoppingList.TabIndex = 1;
-            this.loadShoppingList.Text = "Load Shopping List";
+            this.loadShoppingList.Text = "Load shopping list";
             this.loadShoppingList.UseVisualStyleBackColor = true;
             this.loadShoppingList.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -63,11 +64,22 @@
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "label1";
             // 
+            // addItem
+            // 
+            this.addItem.Location = new System.Drawing.Point(296, 111);
+            this.addItem.Name = "addItem";
+            this.addItem.Size = new System.Drawing.Size(148, 42);
+            this.addItem.TabIndex = 1;
+            this.addItem.Text = "Add new item";
+            this.addItem.UseVisualStyleBackColor = true;
+            this.addItem.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 472);
+            this.Controls.Add(this.addItem);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.checkedShoppingList);
             this.Controls.Add(this.loadShoppingList);
@@ -85,6 +97,7 @@
         private System.Windows.Forms.Button loadShoppingList;
         private System.Windows.Forms.CheckedListBox checkedShoppingList;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button addItem;
     }
 }
 

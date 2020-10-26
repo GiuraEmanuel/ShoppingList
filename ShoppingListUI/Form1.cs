@@ -52,7 +52,6 @@ namespace ShoppingListUI
             {
                 total += item.Price;
             }
-
             return total.ToString();
         }
     }
