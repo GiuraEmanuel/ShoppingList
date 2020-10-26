@@ -36,7 +36,7 @@ namespace ShoppingListUI
                 new Item{ItemName = "Eggs", Price = 7.00M},
                 new Item{ItemName = "Bacon", Price = 15.00M},
             };
-        private void Button1_Click(object sender, EventArgs e)
+        private void BtnLoadShoppingList_Click(object sender, EventArgs e)
         {
             checkedShoppingList.DisplayMember = "Name - Price";
             checkedShoppingList.DataSource = shoppingList;
@@ -52,6 +52,16 @@ namespace ShoppingListUI
                 total += item.Price;
             }
             return total.ToString();
+        }
+
+        private void btnAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+            shoppingList.Remove();
         }
     }
 }

@@ -30,22 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.loadShoppingList = new System.Windows.Forms.Button();
+            this.btnLoadShoppingList = new System.Windows.Forms.Button();
             this.checkedShoppingList = new System.Windows.Forms.CheckedListBox();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.addItem = new System.Windows.Forms.Button();
+            this.btnAddNewItem = new System.Windows.Forms.Button();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // loadShoppingList
+            // btnLoadShoppingList
             // 
-            this.loadShoppingList.Location = new System.Drawing.Point(296, 54);
-            this.loadShoppingList.Name = "loadShoppingList";
-            this.loadShoppingList.Size = new System.Drawing.Size(148, 42);
-            this.loadShoppingList.TabIndex = 1;
-            this.loadShoppingList.Text = "Load shopping list";
-            this.loadShoppingList.UseVisualStyleBackColor = true;
-            this.loadShoppingList.Click += new System.EventHandler(this.Button1_Click);
+            this.btnLoadShoppingList.Location = new System.Drawing.Point(296, 47);
+            this.btnLoadShoppingList.Name = "btnLoadShoppingList";
+            this.btnLoadShoppingList.Size = new System.Drawing.Size(148, 49);
+            this.btnLoadShoppingList.TabIndex = 1;
+            this.btnLoadShoppingList.Text = "Load shopping list";
+            this.btnLoadShoppingList.UseVisualStyleBackColor = true;
+            this.btnLoadShoppingList.Click += new System.EventHandler(this.BtnLoadShoppingList_Click);
             // 
             // checkedShoppingList
             // 
@@ -64,25 +65,36 @@
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "Total :";
             // 
-            // addItem
+            // btnAddNewItem
             // 
-            this.addItem.Location = new System.Drawing.Point(296, 111);
-            this.addItem.Name = "addItem";
-            this.addItem.Size = new System.Drawing.Size(148, 42);
-            this.addItem.TabIndex = 1;
-            this.addItem.Text = "Add new item";
-            this.addItem.UseVisualStyleBackColor = true;
-            this.addItem.Click += new System.EventHandler(this.Button1_Click);
+            this.btnAddNewItem.Location = new System.Drawing.Point(296, 111);
+            this.btnAddNewItem.Name = "btnAddNewItem";
+            this.btnAddNewItem.Size = new System.Drawing.Size(148, 49);
+            this.btnAddNewItem.TabIndex = 5;
+            this.btnAddNewItem.Text = "Add new item";
+            this.btnAddNewItem.UseVisualStyleBackColor = true;
+            this.btnAddNewItem.Click += new System.EventHandler(this.btnAddNewItem_Click);
+            // 
+            // btnRemoveItem
+            // 
+            this.btnRemoveItem.Location = new System.Drawing.Point(296, 180);
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.Size = new System.Drawing.Size(148, 41);
+            this.btnRemoveItem.TabIndex = 6;
+            this.btnRemoveItem.Text = "Remove Item";
+            this.btnRemoveItem.UseVisualStyleBackColor = true;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 472);
-            this.Controls.Add(this.addItem);
+            this.Controls.Add(this.btnRemoveItem);
+            this.Controls.Add(this.btnAddNewItem);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.checkedShoppingList);
-            this.Controls.Add(this.loadShoppingList);
+            this.Controls.Add(this.btnLoadShoppingList);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -94,10 +106,11 @@
 
         #endregion
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Button loadShoppingList;
+        private System.Windows.Forms.Button btnLoadShoppingList;
         private System.Windows.Forms.CheckedListBox checkedShoppingList;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Button addItem;
+        private System.Windows.Forms.Button btnAddNewItem;
+        private System.Windows.Forms.Button btnRemoveItem;
     }
 }
 
