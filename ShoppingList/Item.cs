@@ -7,12 +7,12 @@ namespace ShoppingListBL
     public class Item
     {
         public decimal Price { get; set; }
-        public string Name { get; set; }
-        public string ItemName
+        public string ItemName { get; set; }
+        public string Name
         {
             get
             {
-                return $"{Name} {Price:C}";
+                return $"{ItemName} - {Price:C}";
             }
 
             set
@@ -26,15 +26,15 @@ namespace ShoppingListBL
 
         }
 
-        public Item(string name, decimal price)
+        public Item(string itemName, decimal price)
         {
-            Name = name;
+            ItemName = itemName;
             Price = price;
         }
 
         public override string ToString()
         {
-            return $"{Name} - {Price}";
+            return $"{ItemName} - {Price}";
         }
 
 
