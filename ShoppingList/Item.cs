@@ -37,6 +37,5 @@ namespace ShoppingListBL
             return $"{ItemName} - {Price}";
         }
 
-
     }
 }

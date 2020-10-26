@@ -41,10 +41,5 @@ namespace ShoppingListUI
             checkedShoppingList.DisplayMember = "Name - Price";
             checkedShoppingList.DataSource = shoppingList;
         }
-
-        private void addItem_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

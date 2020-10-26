@@ -31,9 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.loadShoppingList = new System.Windows.Forms.Button();
-            this.addItem = new System.Windows.Forms.Button();
             this.checkedShoppingList = new System.Windows.Forms.CheckedListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,16 +46,6 @@
             this.loadShoppingList.UseVisualStyleBackColor = true;
             this.loadShoppingList.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // addItem
-            // 
-            this.addItem.Location = new System.Drawing.Point(296, 102);
-            this.addItem.Name = "addItem";
-            this.addItem.Size = new System.Drawing.Size(148, 42);
-            this.addItem.TabIndex = 2;
-            this.addItem.Text = "Add New Item";
-            this.addItem.UseVisualStyleBackColor = true;
-            this.addItem.Click += new System.EventHandler(this.addItem_Click);
-            // 
             // checkedShoppingList
             // 
             this.checkedShoppingList.FormattingEnabled = true;
@@ -65,21 +54,22 @@
             this.checkedShoppingList.Size = new System.Drawing.Size(207, 312);
             this.checkedShoppingList.TabIndex = 3;
             // 
-            // textBox1
+            // lblTotal
             // 
-            this.textBox1.Location = new System.Drawing.Point(465, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 4;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(240, 352);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(50, 20);
+            this.lblTotal.TabIndex = 4;
+            this.lblTotal.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 472);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.checkedShoppingList);
-            this.Controls.Add(this.addItem);
             this.Controls.Add(this.loadShoppingList);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -93,9 +83,8 @@
         #endregion
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button loadShoppingList;
-        private System.Windows.Forms.Button addItem;
         private System.Windows.Forms.CheckedListBox checkedShoppingList;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblTotal;
     }
 }
 
