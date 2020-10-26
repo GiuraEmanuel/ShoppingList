@@ -54,14 +54,15 @@ namespace ShoppingListUI
             return total.ToString();
         }
 
-        private void btnAddNewItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRemoveItem_Click(object sender, EventArgs e)
         {
-            shoppingList.Remove();
+            foreach (var item in shoppingList)
+            {
+                if (checkedShoppingList.CheckedItems.Contains(item))
+                {
+                    shoppingList.Remove(item);
+                }
+            }
         }
     }
 }
