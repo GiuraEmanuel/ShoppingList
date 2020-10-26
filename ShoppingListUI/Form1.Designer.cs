@@ -76,9 +76,9 @@
             // 
             // btnRemoveItem
             // 
-            this.btnRemoveItem.Location = new System.Drawing.Point(296, 180);
+            this.btnRemoveItem.Location = new System.Drawing.Point(296, 176);
             this.btnRemoveItem.Name = "btnRemoveItem";
-            this.btnRemoveItem.Size = new System.Drawing.Size(148, 41);
+            this.btnRemoveItem.Size = new System.Drawing.Size(148, 45);
             this.btnRemoveItem.TabIndex = 6;
             this.btnRemoveItem.Text = "Remove Item";
             this.btnRemoveItem.UseVisualStyleBackColor = true;
@@ -95,8 +95,7 @@
             this.Controls.Add(this.checkedShoppingList);
             this.Controls.Add(this.btnLoadShoppingList);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Shipping List App";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
