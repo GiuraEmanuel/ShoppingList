@@ -58,11 +58,11 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(240, 352);
+            this.lblTotal.Location = new System.Drawing.Point(195, 352);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(50, 20);
+            this.lblTotal.Size = new System.Drawing.Size(49, 20);
             this.lblTotal.TabIndex = 4;
-            this.lblTotal.Text = "label1";
+            this.lblTotal.Text = "Total :";
             // 
             // addItem
             // 

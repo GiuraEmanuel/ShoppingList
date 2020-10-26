@@ -38,11 +38,10 @@ namespace ShoppingListUI
             };
         private void Button1_Click(object sender, EventArgs e)
         {
-            
             checkedShoppingList.DisplayMember = "Name - Price";
             checkedShoppingList.DataSource = shoppingList;
 
-            lblTotal.Text = CalculateTotal();
+            lblTotal.Text = "Total : " + CalculateTotal();
         }
 
         private string CalculateTotal()
