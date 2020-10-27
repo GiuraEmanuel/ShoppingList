@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,33 +15,34 @@ namespace ShoppingListUI
 {
     public partial class Form1 : Form
     {
+        ShoppingList shoppingList;
+        List<Item> items;
+
         public Form1()
         {
             InitializeComponent();
             
-        }
-
-        List<Item> items = new List<Item>()
-        {
+            items = new List<Item>()
+            {
             new Item("Bread",5.00M),
             new Item("Bacon",10.00M),
             new Item("Cheese",7.00M),
             new Item("Eggs",6.00M),
-        };
+            };
+            shoppingList = new ShoppingList("Food list", items);
+        }
 
-        
         private void BtnLoadShoppingList_Click(object sender, EventArgs e)
         {
-            
-            checkedShoppingList.DisplayMember = "Name - Price";
-            checkedShoppingList.DataSource = items;
+            checkedShoppingList.DataSource = shoppingList.Items;
+            checkedShoppingList.DisplayMember = "NameAndPrice";
             lblTotal.Text = "Total : " + CalculateTotal();
         }
 
         private string CalculateTotal()
         {
             decimal total = 0;
-            foreach (var item in new ShoppingList("Food list", items).Items)
+            foreach (var item in shoppingList.Items)
             {
                 total += item.Price;
             }
@@ -48,6 +50,11 @@ namespace ShoppingListUI
         }
 
         private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddNewItem_Click(object sender, EventArgs e)
         {
 
         }

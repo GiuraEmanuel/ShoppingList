@@ -19,7 +19,7 @@ namespace ShoppingListBL
         {
             foreach (var item in Items)
             {
-                Console.WriteLine(item.GetNameAndPrice());
+                Console.WriteLine(item.NameAndPrice);
             }
         }
 
