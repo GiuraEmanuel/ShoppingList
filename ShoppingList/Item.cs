@@ -15,9 +15,10 @@ namespace ShoppingListBL
             Price = price;
         }
 
-        public override string ToString()
+        public string GetNameAndPrice()
         {
             return $"{Name} - {Price:C}";
         }
+
     }
 }

@@ -17,28 +17,30 @@ namespace ShoppingListUI
         public Form1()
         {
             InitializeComponent();
+            
         }
 
-        List<Item> shoppingList = new List<Item>()
-            {
-                new Item("Bread", 4.00M),
-                new Item("Cheese", 10.00M),
-                new Item("Eggs", 7.00M),
-                new Item("Bacon", 15.00M),
-                new Item("Potatoes", 8.00M),
-            };
+        List<Item> items = new List<Item>()
+        {
+            new Item("Bread",5.00M),
+            new Item("Bacon",10.00M),
+            new Item("Cheese",7.00M),
+            new Item("Eggs",6.00M),
+        };
 
+        
         private void BtnLoadShoppingList_Click(object sender, EventArgs e)
         {
+            
             checkedShoppingList.DisplayMember = "Name - Price";
-            checkedShoppingList.DataSource = shoppingList;
+            checkedShoppingList.DataSource = items;
             lblTotal.Text = "Total : " + CalculateTotal();
         }
 
         private string CalculateTotal()
         {
             decimal total = 0;
-            foreach (var item in shoppingList)
+            foreach (var item in new ShoppingList("Food list", items).Items)
             {
                 total += item.Price;
             }

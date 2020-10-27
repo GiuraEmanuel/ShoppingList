@@ -6,7 +6,7 @@ namespace ShoppingListBL
 {
     public class ShoppingList
     {
-        public List<Item> Items { get; set; }
+        public List<Item> Items { get;}
         public string ListName { get;}
 
         public ShoppingList(string listName, List<Item> items)
@@ -15,17 +15,23 @@ namespace ShoppingListBL
             Items = items;
         }
 
-        //public void DisplayItems()
-        //{
-        //    foreach (var item in Items)
-        //    {
-        //        Console.WriteLine(item.ToString());
-        //    }
-        //}
+        public void DisplayItems()
+        {
+            foreach (var item in Items)
+            {
+                Console.WriteLine(item.GetNameAndPrice());
+            }
+        }
 
-        //public void AddItemToShoppingList(Item item)
-        //{
-        //    Items.Add(item);
-        //}
+        public void AddItemToShoppingList(Item item)
+        {
+            Items.Add(item);
+        }
+
+        public void RemoveItemFromShoppingList(Item item)
+        {
+            Items.Remove(item);
+        }
+
     }
 }
